@@ -57,7 +57,7 @@ function parseDocument(doc: FirestoreDocument): { id: string; data: Record<strin
 
 async function fetchUsers() {
   try {
-    const response = await fetch(`${FIRESTORE_URL}/users`);
+    const response = await fetch(`${FIRESTORE_URL}/users`, { cache: 'no-store' });
     if (!response.ok) {
       console.error("❌ Error fetching users:", response.status);
       return [];
@@ -77,7 +77,7 @@ async function fetchUsers() {
 
 async function fetchSchools() {
   try {
-    const response = await fetch(`${FIRESTORE_URL}/schools`);
+    const response = await fetch(`${FIRESTORE_URL}/schools`, { cache: 'no-store' });
     if (!response.ok) {
       console.error("❌ Error fetching schools:", response.status);
       return [];
@@ -96,7 +96,7 @@ async function fetchSchools() {
 
 async function fetchCampuses() {
   try {
-    const response = await fetch(`${FIRESTORE_URL}/campuses`);
+    const response = await fetch(`${FIRESTORE_URL}/campuses`, { cache: 'no-store' });
     if (!response.ok) {
       console.error("❌ Error fetching campuses:", response.status);
       return [];
