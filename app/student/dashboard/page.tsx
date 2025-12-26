@@ -1,5 +1,8 @@
 import DashboardClient from './DashboardClient';
 
+// Force dynamic rendering to avoid static generation errors
+export const dynamic = 'force-dynamic';
+
 const FIREBASE_PROJECT_ID = 'quiz-app-ff0ab';
 
 interface FirestoreValue {

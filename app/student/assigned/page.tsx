@@ -1,6 +1,9 @@
 import { Suspense } from 'react';
 import AssignedQuizzesClient from './AssignedQuizzesClient';
 
+// Force dynamic rendering to avoid static generation errors
+export const dynamic = 'force-dynamic';
+
 const PROJECT_ID = 'quiz-app-ff0ab';
 const FIRESTORE_URL = `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default)/documents/quizzes`;
 
